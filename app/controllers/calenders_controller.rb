@@ -4,7 +4,7 @@ class CalendersController < ApplicationController
   # GET /calenders
   # GET /calenders.json
   def index
-    @calenders = Calender.all
+    @calenders = current_user.calenders.all
   end
 
   # GET /calenders/1
@@ -14,7 +14,7 @@ class CalendersController < ApplicationController
 
   # GET /calenders/new
   def new
-    @calender = Calender.new
+    @calender = current_user.calenders.new
   end
 
   # GET /calenders/1/edit
@@ -24,11 +24,11 @@ class CalendersController < ApplicationController
   # POST /calenders
   # POST /calenders.json
   def create
-    @calender = Calender.new(calender_params)
+    @calender = current_user.calenders.new(calender_params)
 
     respond_to do |format|
       if @calender.save
-        format.html { redirect_to @calender, notice: 'Calender was successfully created.' }
+        format.html { redirect_to user_path(current_user), notice: 'Calender was successfully created.' }
         format.json { render :show, status: :created, location: @calender }
       else
         format.html { render :new }
@@ -64,7 +64,7 @@ class CalendersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_calender
-      @calender = Calender.find(params[:id])
+      @calender = current_user.calenders.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
