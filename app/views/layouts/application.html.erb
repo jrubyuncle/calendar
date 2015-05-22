@@ -33,12 +33,16 @@
         <ul class="nav navbar-nav">
           <li class="active"><%= link_to '首頁', root_path %></li>
           <li><%= link_to '關於這兒', about_path %></li>
-          <li><%= link_to 'goto創造一個行事曆', root_path %></li>
+          <li><%= link_to 'goto創造一個行事曆', new_calender_path %></li>
           <li><%= link_to '瀏覽', root_path %></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+
           <% if user_signed_in? %>
+            <% if current_user.admin? %>
+              <li><%= link_to "後台", admin_users_path %></li>
+            <% end %>
             <li><%= link_to "個人資料", user_path(current_user) %></li>
             <li><%= link_to "登出", sign_out_path, method: :delete%></li>
           <% else %>
@@ -58,20 +62,20 @@
       <% end %>
     <% end %>
 
-    
+
   </div>
   <%= yield %>
 
   <footer class="footer">
       <div class="container">
-        
+
         <ul class="footerlist"  >
           <li><%= link_to '關於我們', about_path %></li>
           <li><%= link_to '使用者條款', terms_path %></li>
           <li><%= link_to '隱私權政策', privacy_path %></li>
           <li><%= link_to '給開發者的文件', doc_path %></li>
-          <li>Copyright © 2015</li>
-        </ul> 
+          <li>Copyright © 2015 </li>
+        </ul>
       </div>
   </footer>
 </body>
