@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   resources :calenders
   root 'welcome#index'
 
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   # Admin Routes
   namespace :admin do
     resources :users
+    resources :calenders
   end
 
 

@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to admin_calenders_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_admin_calender_path(@admin_calender), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show admin_calender</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>User:</dt>
+  <dd><%= @admin_calender.user %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @admin_calender.name %></dd>
+
+  <dt>Public:</dt>
+  <dd><%= @admin_calender.public %></dd>
+
+</dl>
