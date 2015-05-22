@@ -10,6 +10,45 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
+
+body{
+
+background: #f1f1f1;	
+}
+
+.footer {
+	position: relative;
+  	bottom: 0;
+  	width: 100%;
+  	background-color:#31455C;
+    color: rgb(178, 178, 178);
+}
+.text-muted {
+  	margin: 20px 0;
+    color: rgb(178, 178, 178);
+}
+.footerlist{  margin-top: 11px;
+}
+.footerlist li {
+	display: inline-block;  
+	line-height: 30px;
+  	padding-right: 14px;
+  }
+ .footerlist li a{ 
+ 	color: rgb(178, 178, 178);
+ 	text-decoration: none;}
+ .footerlist li a:hover{color: #f1f1f1;} 
+
+.whitemain{
+	border: 1px solid #EAEAEA;
+	background: white;
+  	margin-bottom: 15px;
+  	padding: 15px;
+	}
+.titleheader{ text-align: center;}
+.scoialteam{text-align: center;}
+.scoialteam a{  padding-right: 7px;}
