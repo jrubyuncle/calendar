@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
 
 
-
-  resources :users
   root 'welcome#index'
+
+  get 'sign_in' => 'sessions#new'
+  post 'sign_in' => 'sessions#create'
 
   get 'welcome/index'
   get 'doc' => 'doc#index'
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   get 'privacy' => 'pages#privacy'
   get 'about'   => 'pages#about'
 
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,18 @@
+
+<%= form_for(@login_form, url: sign_in_path) do |f| %>
+  <% if @login_form.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% @login_form.errors.full_messages.each do |msg|%>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  帳號：
+  <%= f.text_field :email %>
+  密碼：
+  <%= f.password_field :password %>
+
+  <%= f.submit '登入' %>
+<% end %>

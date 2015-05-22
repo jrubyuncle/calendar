@@ -21,3 +21,4 @@
 
 en:
   hello: "Hello world"
+  invalid_email_or_password: "Invalid Email or Password"
