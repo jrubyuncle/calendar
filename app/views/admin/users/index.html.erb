@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_admin_user_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New User
+  <% end %>
+  <h1>Listing admin_users</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Nickname</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @admin_users) do |admin_user| %>
+            <td><%= admin_user.email %></td>
+            <td><%= admin_user.password %></td>
+            <td><%= admin_user.nickname %></td>
+            <td><%= link_to 'Show', admin_user %></td>
+        <td><%= link_to 'Edit', edit_admin_user_path(admin_user) %></td>
+        <td><%= link_to 'Destroy', admin_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

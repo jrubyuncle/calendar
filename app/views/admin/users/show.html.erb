@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to admin_users_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_admin_user_path(@admin_user), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show admin_user</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Email:</dt>
+  <dd><%= @admin_user.email %></dd>
+
+  <dt>Password:</dt>
+  <dd><%= @admin_user.password %></dd>
+
+  <dt>Nickname:</dt>
+  <dd><%= @admin_user.nickname %></dd>
+
+</dl>

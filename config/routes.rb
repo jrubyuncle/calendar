@@ -3,10 +3,14 @@ Rails.application.routes.draw do
 
 
 
+  namespace :admin do
+    resources :users
+  end
   root 'welcome#index'
 
   get 'sign_in' => 'sessions#new'
   post 'sign_in' => 'sessions#create'
+  delete 'sign_out' => 'sessions#destroy'
 
   get 'welcome/index'
   get 'doc' => 'doc#index'
