@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_calender_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Calender
+  <% end %>
+  <h1>Listing calenders</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>User</th>
+            <th>Name</th>
+            <th>Public</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @calenders) do |calender| %>
+            <td><%= calender.user %></td>
+            <td><%= calender.name %></td>
+            <td><%= calender.public %></td>
+            <td><%= link_to 'Show', calender %></td>
+        <td><%= link_to 'Edit', edit_calender_path(calender) %></td>
+        <td><%= link_to 'Destroy', calender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

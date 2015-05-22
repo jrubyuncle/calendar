@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :users
-  end
+
+  resources :calenders
   root 'welcome#index'
 
   get  'sign_up' => 'registration#new'
@@ -18,7 +17,14 @@ Rails.application.routes.draw do
   get 'privacy' => 'pages#privacy'
   get 'about'   => 'pages#about'
 
-  # resources :users
+  resources :users, only: [:show]
+
+  # Admin Routes
+  namespace :admin do
+    resources :users
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
