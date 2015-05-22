@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
-
-
-
-
   namespace :admin do
     resources :users
   end
   root 'welcome#index'
 
-  get 'sign_in' => 'sessions#new'
-  post 'sign_in' => 'sessions#create'
+  get  'sign_up' => 'registration#new'
+  post 'sign_up' => 'registration#create'
+
+  get    'sign_in'  => 'sessions#new'
+  post   'sign_in'  => 'sessions#create'
   delete 'sign_out' => 'sessions#destroy'
 
   get 'welcome/index'
@@ -19,7 +18,7 @@ Rails.application.routes.draw do
   get 'privacy' => 'pages#privacy'
   get 'about'   => 'pages#about'
 
-  resources :users
+  # resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
