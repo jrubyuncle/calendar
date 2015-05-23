@@ -9,7 +9,7 @@ class RegistrationController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, notice: 'User was successfully created.'
+      redirect_to root_path, notice: '歡迎使用Open Calendar！'
     else
       render :new
     end
