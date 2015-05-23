@@ -16,7 +16,10 @@
               <img src="http://i.imgur.com/Ew5EtzA.jpg" alt="..." class="img-responsive">
               </div>
               <ul class="housemain">
-                  <li class="fright"><a href=""><i class="fa fa-eye"></i></a> <a href=""><i class="fa fa-trash-o"></i></a></li>
+                  <li class="fright">
+                    <%= link_to '', calender , class: 'fa fa-eye' %>
+                    <%= link_to '', calender, method: :delete, data: { confirm: 'Are you sure?'  } , class: 'fa fa-trash-o'%>
+                    </li>
 
                   <li>
                     <%= calender.name %>
@@ -46,7 +49,7 @@
     </thead>
 
     <tbody>
-      <%= content_tag_for(:tr, @user.calenders) do |calender| %>
+      <%= content_tag_for(:tr, @calenders) do |calender| %>
             <td><%= calender.name %></td>
             <td><%= calender.public? %></td>
             <td><%= link_to 'Show', calender %></td>

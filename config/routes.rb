@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-
-
-  resources :calendars, controller: :calenders, as: :calenders
+  resources :calendars, controller: :calenders, as: :calenders do
+    get :events
+    put :events, action: :update_events
+  end
   root 'welcome#index'
 
   get  'sign_up' => 'registration#new'

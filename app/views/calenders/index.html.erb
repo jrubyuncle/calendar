@@ -5,7 +5,18 @@
       新增行事曆
     <% end %>
     <h1>探索行事曆</h1>
+  
+
+  <form class="form-inline fright" action="">
+    <div class="form-group">
+      <div class="input-group">
+        <input type="text" class="form-control" id="exampleInputAmount" value="<%= params[:q]%>" name="q">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">搜尋</button>
+  </form>
   </div>
+
       <div class="row">
         <%= content_tag_for(:tr, @calenders) do |calender| %>
         <div class="col-sm-6 col-md-4">
@@ -14,11 +25,12 @@
             <img src="http://i.imgur.com/Ew5EtzA.jpg" alt="..." class="img-responsive">
             </div>
             <ul class="housemain">
-                <li><h4><%= calender.name %></h4></li>
+                <li class="fright">
+                  <%= link_to '', calender , class: 'fa fa-eye' %></li>
+                <li><%= calender.name %></li>
                 <li class="green01">作者<%= calender.user %></li>
                 <li class="green02"><%= calender.public %></li>
                 <li class="green02">創立於：2015/05/08</li>
-
 
             </ul>
             <div class="clear"></div> 
@@ -26,5 +38,5 @@
         </div>
         <% end %>
       </div>
-
 </div>
+

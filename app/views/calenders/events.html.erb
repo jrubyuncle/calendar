@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>編輯日曆「<%= @calender.name %>」中的事件</h1>
+</div>
+
+<%= simple_nested_form_for @calender, url: calender_events_path(@calender), method: :put do |f| %>
+  <%= f.simple_fields_for :events do |ff| %>
+    <%= ff.input :title %>
+    <%= ff.input :all_day, input_html: {data: {all_day: true}} %>
+    <div data-date-input>
+      <%= ff.input :start, as: :string, input_html: {data: {datetime_picker: ''}} %>
+      <%= ff.input :end, as: :string, input_html: {data: {datetime_picker: ''}} %>
+    </div>
+    <%= ff.link_to_remove "刪除這個事件", class: 'btn btn-danger' %>
+    <hr>
+  <% end %>
+  <hr>
+  <%= f.link_to_add '新增事件', :events, class: 'btn btn-info' %>
+  <hr>
+  <%= f.submit '更新', class: 'btn btn-default btn-success btn-lg' %>
+<% end %>
+<hr>
