@@ -89,8 +89,12 @@ background: #f1f1f1;
     border-radius:0;
     padding: 8px 15px 8px 15px;
 }
-.housemain{ list-style-type: none; padding-left: 0px;     margin-left: 138px;   margin-left: 124px;}
-.housemain li{  padding-bottom: 2px; }
+.calname{font-size: 18px;}
+.padtop{margin-top: 11px;}
+.housemain{ list-style-type: none; padding-left: 0px;     
+  margin-left: 138px;   margin-left: 124px; margin-bottom: 0px;}
+.housemain li{  padding-bottom: 2px;   }
+.housemain li a{color: #f4f4f4; text-decoration: none;}
 .houselist{ list-style-type: none;  padding-left: 0px;}
 .houselist li{
   display: inline-block;

@@ -6,6 +6,7 @@ class Calender < ActiveRecord::Base
 
   validates :name, presence: true
   validates :public, inclusion: { in: [true, false] }
+
   accepts_nested_attributes_for :events, allow_destroy: true, reject_if: proc { |attributes| attributes['title'].blank? }
 
   def to_ics
