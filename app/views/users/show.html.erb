@@ -10,30 +10,7 @@
 </div>
       <div class="row">
           <%= content_tag_for(:tr, @user.calenders) do |calender| %>
-            <div class="col-sm-6 col-md-4">
-              <div class="bluethumbnail">
-                <div class="smallimg">
-                <img src="http://i.imgur.com/Ew5EtzA.jpg" alt="..." class="img-responsive">
-                </div>
-                <ul class="housemain">
-                    <li class="fright">
-                      <%= link_to '', calender , class: 'fa fa-eye' %>
-                      <%= link_to '', calender, method: :delete, data: { confirm: 'Are you sure?'  } , class: 'fa fa-trash-o'%>
-                      </li>
-
-                    <li>
-                      <%= calender.name %>
-
-                    </li>
-                    <li class="green01">作者<%= calender.user %></li>
-                    <li class="green02"><%= calender.public %></li>
-                    <li class="green02">創立於：2015/05/08</li>
-
-
-                </ul>
-                <div class="clear"></div>
-              </div>
-            </div>
+            <%= render 'shared/calendar', calender: calender %>
           <% end %>
       </div>
 
