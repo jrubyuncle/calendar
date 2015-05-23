@@ -15,7 +15,28 @@
 
       <div class="row">
         <%= content_tag_for(:tr, @calenders) do |calender| %>
+<<<<<<< HEAD
+        <div class="col-sm-6 col-md-4">
+          <div class="bluethumbnail">
+            <div class="smallimg">
+              <%= link_to calender do%>
+                <img src="http://i.imgur.com/Ew5EtzA.jpg" alt="..." class="img-responsive">
+              <% end %>
+            </div>
+            <ul class="housemain">
+                <li class="calname"><i class="fa fa-calendar"></i> <%= link_to calender.name, calender %></li>
+                <li class="green01"><i class="fa fa-user"></i> <%= link_to calender.user, calender.user %></li>
+                <!-- <li class="green02"><%= calender.public %></li> -->
+                <li class="green02"><i class="fa fa-pencil-square"></i> <%= l(calender.created_at, format: :date) %></li>
+                <li class="fright padtop"><button type="button" class="btn btn-default"><i class="fa fa-cloud-download"></i> 下載</button></li>
+
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+=======
           <%= render 'shared/calendar', calender: calender %>
+>>>>>>> 184a915853b4ae1ce8b96066335311af9bd8b883
         <% end %>
       </div>
 </div>
