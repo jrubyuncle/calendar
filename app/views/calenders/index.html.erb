@@ -23,10 +23,10 @@
               <% end %>
             </div>
             <ul class="housemain">
-                <li class="calname"><%= link_to calender.name, calender %></li>
-                <li class="green01">作者：<%= link_to calender.user, calender.user %></li>
+                <li class="calname"><i class="fa fa-calendar"></i> <%= link_to calender.name, calender %></li>
+                <li class="green01"><i class="fa fa-user"></i> <%= link_to calender.user, calender.user %></li>
                 <!-- <li class="green02"><%= calender.public %></li> -->
-                <li class="green02">更新：<%= l(calender.created_at, format: :date) %></li>
+                <li class="green02"><i class="fa fa-pencil-square"></i> <%= l(calender.created_at, format: :date) %></li>
                 <li class="fright padtop"><button type="button" class="btn btn-default"><i class="fa fa-cloud-download"></i> 下載</button></li>
 
             </ul>
