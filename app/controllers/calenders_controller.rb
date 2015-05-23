@@ -12,6 +12,10 @@ class CalendersController < ApplicationController
   # GET /calenders/1.json
   def show
     @calender = Calender.find(params[:id])
+    respond_to do |format|
+      format.html{ render }
+      format.ics{ render text: @calender.to_ics }
+    end
   end
 
   # GET /calenders/new
