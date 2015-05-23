@@ -18,12 +18,51 @@
 
     <%= link_to calender_events_path(@calender), class: 'btn btn-primary' do %>
       <span class="glyphicon glyphicon-edit"></span>
-      我要共筆事件
+      
     <% end %>
-    <h1><%= @calender.name %> <a target="_blank" href="http://www.facebook.com/share.php?u=<%= calender_url(@calender) %>"><%= image_tag 'fb_pic.png', alt: '分享到 FB', border: 0, width: 20 %></a></h1>
+    <!-- Button trigger modal -->
+    <div class="btnright">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      分享
+    </button>
+    </div>
+   
+
+
+
+    <h1><%= @calender.name %></h1>
   </div>
   <div id="calendar" data-path="<%= calender_events_path(@calender, format: :json)%>"></div>
 </div>
 
 
 <%= text_area_tag nil, content_tag(:iframe, nil, width: 560, height: 315, src: calender_embeded_url(@calender)), cols: 150 %> 
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">分享</h4>
+      </div>
+      <div class="modal-body">
+
+        <h4>嵌入連結</h4>
+        <input type="text" value='<iframe width="660" height="315" src="http://localhost:3000/calendars/1/embeded"></iframe>' style="width:560px;">
+        <br>
+        or
+        <br>
+        <a target="_blank" href="http://www.facebook.com/share.php?u=<%= calender_url(@calender) %>"><i class="fa fa-facebook-square"> 分享到Facebook</i></a>
+
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
