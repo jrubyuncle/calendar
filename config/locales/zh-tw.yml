@@ -7,3 +7,13 @@ zh-TW:
         all_day: 是否為整天活動
         start: 開始時間
         end: 結束時間
+  time:
+    formats:
+      default: ! '%Y-%m-%d %H:%M:%S'
+      long: ! '%Y年%b%d日 %H:%M'
+      short: ! '%b%d日 %H:%M'
+      date: ! '%Y-%m-%d'
+      time: ! '%H:%M:%S'
+      simple_time: ! '%H:%M'
+      date_time: ! '%Y-%m-%d / %H:%M'
+      full_size_time: ! '%H：%M'
