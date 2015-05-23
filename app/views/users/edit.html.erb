@@ -1,8 +1,66 @@
 <div class="container">
-<h1>Editing User</h1>
+      <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+          <div class="panel-heading">
+            <div class="row">
 
-<%= render 'form' %>
+                <a href="#" id="register-form-link">修改個人資料</a>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
-</div>
+            </div>
+            <hr>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-lg-12">
+
+
+              <%= form_for(@user, url: user_path(@user), html: { role: "form" , id: 'register-form'}) do |f| %>
+                <% if @user.errors.any? %>
+                  <div class="alert alert-danger alert-dismissable" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
+
+                    <ul>
+                    <% @user.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+
+                <div class="form-group">
+
+                  <%= f.text_field :email, class: "form-control" , placeholder: '電子信箱即帳號', disabled: true%>
+
+                </div>
+                <div class="form-group">
+
+                    <%= f.password_field :password, class: "form-control" , placeholder: '密碼' %>
+
+                </div>
+                <div class="form-group">
+
+                    <%= f.password_field :password_confirmation, class: "form-control" , placeholder: '密碼再次驗證'%>
+
+                </div>
+                <div class="form-group">
+
+                    <%= f.text_field :nickname, class: "form-control" , placeholder: '暱稱'%>
+
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3">
+                    <%= f.submit class: "form-control btn btn-register" , id:'register-submit' , value: "修改"%>
+                      </div>
+                    </div>
+                </div>
+              <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

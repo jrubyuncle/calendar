@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'privacy' => 'pages#privacy'
   get 'about'   => 'pages#about'
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
 
   # Admin Routes
   namespace :admin do
