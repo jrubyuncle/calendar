@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
-
-
-<<<<<<< Updated upstream
-  resources :calendars, controller: :calenders, as: :calenders
-=======
   resources :calendars, controller: :calenders, as: :calenders do
     get :events
     put :events, action: :update_events
   end
->>>>>>> Stashed changes
   root 'welcome#index'
 
   get  'sign_up' => 'registration#new'

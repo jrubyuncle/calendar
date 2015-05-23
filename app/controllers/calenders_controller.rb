@@ -1,11 +1,7 @@
 class CalendersController < ApplicationController
-<<<<<<< Updated upstream
-  before_action :set_calender, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new]
-=======
   before_action :set_calender, only: [:show, :edit, :update, :destroy, :events, :update_events]
+  before_action :authenticate_user!, only: [:new]
 
->>>>>>> Stashed changes
   # GET /calenders
   # GET /calenders.json
   def index
