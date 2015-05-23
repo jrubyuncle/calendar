@@ -10,8 +10,13 @@
     Edit
   <% end %>
   <%= link_to calender_events_path(@calender), class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-pencil"></span>
+    <span class="glyphicon glyphicon-edit"></span>
     我要共筆事件
+  <% end %>
+
+  <%= link_to calender_path(@calender, format: :ics), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-calendar"></span>
+    下載 .ics 日曆檔
   <% end %>
   <h1>Show calender</h1>
 </div>

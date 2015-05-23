@@ -12,6 +12,13 @@ class CalendersController < ApplicationController
   # GET /calenders/1.json
   def show
     @calender = Calender.find(params[:id])
+    respond_to do |format|
+      format.html{ render }
+      format.ics do
+        response.headers['Content-Disposition'] = %Q(attachment; filename="#{@calender.name}.ics")
+        render text: @calender.to_ics
+      end
+    end
   end
 
   # GET /calenders/new
@@ -75,6 +82,10 @@ class CalendersController < ApplicationController
     else
       render :events
     end
+  end
+
+  def embeded
+    render partial: 'calendar', layout: false
   end
 
   private

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :calendars, controller: :calenders, as: :calenders do
+    get :embeded
     get :events
     put :events, action: :update_events
   end
