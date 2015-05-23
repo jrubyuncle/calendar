@@ -20,8 +20,10 @@
       <span class="glyphicon glyphicon-edit"></span>
       我要共筆事件
     <% end %>
-
-    <h1><%= @calender.name %></h1>
+    <h1><%= @calender.name %> <a target="_blank" href="http://www.facebook.com/share.php?u=<%= calender_url(@calender) %>"><%= image_tag 'fb_pic.png', alt: '分享到 FB', border: 0, width: 20 %></a></h1>
   </div>
   <div id="calendar" data-path="<%= calender_events_path(@calender, format: :json)%>"></div>
 </div>
+
+
+<%= text_area_tag nil, content_tag(:iframe, nil, width: 560, height: 315, src: calender_embeded_url(@calender)), cols: 150 %> 
