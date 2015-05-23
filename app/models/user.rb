@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
 
 
   def to_s
-    nickname.to_s
+    if nickname.nil?
+      email.to_s
+    else
+      nickname.to_s
+    end
   end
 end
