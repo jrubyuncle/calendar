@@ -6,35 +6,27 @@
                 <% end %>
                 </div>
                 <ul class="housemain">
-                    <li class="calname"><%= calender.name %></li>
-                    <li class="green01">作者<%= calender.user %></li>
-                    <li class="green02">創立於：2015/05/08</li>
-                    <li class="fright padtop"><button type="button" class="btn btn-default"><i class="fa fa-trash-o"></i> 刪除</button></li>
+                    <li class="calname"><%= link_to calender.name, calender %></li>
+                    <li class="green01">作者：<%= link_to calender.user, calender.user %></li>
+                    <li class="green02">更新：<%= l(calender.created_at, format: :date) %></li>
+                    <% if calender.user == current_user %>
+                      <li class="fright padtop">
+                        <%= link_to calender_path(calender), method: :delete, class: 'btn btn-primary' do %>
+                          <span class="fa fa-trash-o"></span>
+                          刪除
+                        <% end %>
+                      </li>
+                    <% else %>
+                      <li class="fright padtop">
+                        <%= link_to calender_path(calender, format: :ics), class: 'btn btn-primary' do %>
+                          <span class="glyphicon glyphicon-calendar"></span>
+                          匯出
+                        <% end %>
+                      </li>
+                    <% end %>
 
 
                 </ul>
                 <div class="clear"></div>
               </div>
             </div>
-
-
-<div class="col-sm-6 col-md-4">
-  <div class="bluethumbnail">
-    <div class="smallimg">
-      <%= link_to calender do%>
-        <img src="http://i.imgur.com/Ew5EtzA.jpg" alt="..." class="img-responsive">
-      <% end %>
-    </div>
-    <ul class="housemain">
-        <li class="fright">
-          <%= link_to '', calender, method: :delete, data: { confirm: 'Are you sure?'  } , class: 'fa fa-trash-o'%>
-          </li>
-        <li><%= link_to calender.name, calender %></li>
-        <li class="green01">作者：<%= link_to calender.user, calender.user %></li>
-        <!-- <li class="green02"><%= calender.public %></li> -->
-        <li class="green02">更新：<%= l(calender.created_at, format: :date) %></li>
-
-    </ul>
-    <div class="clear"></div>
-  </div>
-</div>
