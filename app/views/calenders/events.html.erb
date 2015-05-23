@@ -3,7 +3,7 @@
 </div>
 
 <%= simple_nested_form_for @calender, url: calender_events_path(@calender), method: :put do |f| %>
-  <%= f.simple_fields_for :events do |ff| %>
+  <%= f.simple_fields_for :events, @calender.events.where(user: current_user) do |ff| %>
     <%= ff.input :title %>
     <%= ff.input :all_day, input_html: {data: {all_day: true}} %>
     <div data-date-input>
