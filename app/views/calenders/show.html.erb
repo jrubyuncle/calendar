@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<div class="container">
+
+
+<div id="calendar"></div>
+=======
+>>>>>>> 46ecfb7985326d3e289a319affd4e17f082038ad
 
 <div class="page-header">
   <%= link_to calenders_path, class: 'btn btn-default' do %>
@@ -19,4 +26,20 @@
   <h1><%= @calender.name %></h1>
 </div>
 
+<<<<<<< HEAD
+<dl class="dl-horizontal">
+  <dt>User:</dt>
+  <dd><%= @calender.user %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @calender.name %></dd>
+
+  <dt>Public:</dt>
+  <dd><%= @calender.public %></dd>
+
+</dl>
+
+</div>
+=======
 <div id="calendar" data-path="<%= calender_events_path(@calender, format: :json)%>"></div>
+>>>>>>> 46ecfb7985326d3e289a319affd4e17f082038ad
