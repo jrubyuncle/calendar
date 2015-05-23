@@ -15,4 +15,4 @@
   <h1><%= @calender.name %></h1>
 </div>
 
-<div id="calendar"></div>
+<div id="calendar" data-path="<%= calender_events_path(@calender, format: :json)%>"></div>
