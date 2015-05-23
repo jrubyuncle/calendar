@@ -1,6 +1,7 @@
 namespace :dev do
   task fake: %i[db:reset environment] do
     user = User.create! email: 'hello@test.com', password: 'password'
+    user_2 = User.create! email: 'hello2@test.com', password: 'password'
     calender = user.calenders.create! name: '我的日曆', public: true
     5.times do
       day = rand(10).days.ago.beginning_of_day
