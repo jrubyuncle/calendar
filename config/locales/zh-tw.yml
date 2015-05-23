@@ -1,2 +1,9 @@
 zh-TW:
   invalid_email_or_password: "帳號或密碼錯誤"
+  activerecord:
+    attributes:
+      event:
+        title: 名稱
+        all_day: 是否為整天活動
+        start: 開始時間
+        end: 結束時間
