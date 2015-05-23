@@ -14,7 +14,6 @@ module Forms
     private
 
       def authenticate_user
-        p user
         unless user.try(:authenticate, password)
           errors.add(" ", I18n.t(:invalid_email_or_password))
         end
