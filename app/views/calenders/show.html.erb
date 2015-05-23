@@ -18,7 +18,7 @@
 
     <%= link_to calender_events_path(@calender), class: 'btn btn-primary' do %>
       <span class="glyphicon glyphicon-edit"></span>
-      
+
     <% end %>
     <!-- Button trigger modal -->
     <div class="btnright">
@@ -26,7 +26,7 @@
       分享
     </button>
     </div>
-   
+
 
 
 
@@ -34,10 +34,6 @@
   </div>
   <div id="calendar" data-path="<%= calender_events_path(@calender, format: :json)%>"></div>
 </div>
-
-
-<%= text_area_tag nil, content_tag(:iframe, nil, width: 560, height: 315, src: calender_embeded_url(@calender)), cols: 150 %> 
-
 
 
 
@@ -58,7 +54,7 @@
         <br>
         <a target="_blank" href="http://www.facebook.com/share.php?u=<%= calender_url(@calender) %>"><i class="fa fa-facebook-square"> 分享到Facebook</i></a>
 
-        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
