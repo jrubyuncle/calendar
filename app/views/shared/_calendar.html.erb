@@ -6,19 +6,19 @@
                 <% end %>
                 </div>
                 <ul class="housemain">
-                    <li class="calname"><%= link_to calender.name, calender %></li>
+                    <li class="calname"><i class="fa fa-pencil-square"></i> <%= link_to calender.name, calender %></li>
                     <li class="green01">作者：<%= link_to calender.user, calender.user %></li>
                     <li class="green02">更新：<%= l(calender.created_at, format: :date) %></li>
                     <% if calender.user == current_user %>
                       <li class="fright padtop">
-                        <%= link_to calender_path(calender), method: :delete, class: 'btn btn-primary' do %>
+                        <%= link_to calender_path(calender), method: :delete, class: 'btn btn-orange' do %>
                           <span class="fa fa-trash-o"></span>
                           刪除
                         <% end %>
                       </li>
                     <% else %>
                       <li class="fright padtop">
-                        <%= link_to calender_path(calender, format: :ics), class: 'btn btn-primary' do %>
+                        <%= link_to calender_path(calender, format: :ics), class: 'btn btn-warning' do %>
                           <span class="glyphicon glyphicon-calendar"></span>
                           匯出
                         <% end %>
