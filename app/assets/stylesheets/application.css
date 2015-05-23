@@ -53,7 +53,7 @@ background: #f1f1f1;
 .scoialteam{text-align: center;}
 .scoialteam a{  padding-right: 7px;}
 .ctrlwidth{width: 800px; margin: 0 auto;}
-.addshadow{box-shadow: 0 0 13px rgba(66, 130, 228, 0.26);}
+.addshadow{  box-shadow: 0 0 2px rgba(29, 75, 126, 0.53);}
 
 .btn {
     padding: 11px 24px;
@@ -83,3 +83,47 @@ background: #f1f1f1;
 .btn.sharp {
   border-radius:0;
 }
+.well {
+    border-radius:0;
+    padding: 8px 15px 8px 15px;
+}
+.housemain{ list-style-type: none; padding-left: 0px;     margin-left: 138px;   margin-left: 124px;}
+.housemain li{  padding-bottom: 2px; }
+.houselist{ list-style-type: none;  padding-left: 0px;}
+.houselist li{
+  display: inline-block;
+  /* background: #55c3a2; */
+  /* color: white; */
+  /* padding-left: 5px; */
+  /* padding-right: 5px; */
+  padding: 3px 10px 3px 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.smallimg{  float: left;}
+.smallimg img{
+  width: 117px;
+  padding: 3px;
+  border-radius: 0px 0px 4px 4px;
+
+}
+.bluethumbnail {
+  display: block;
+  padding: 6px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #31455C;
+  border: 1px solid #ddd;
+  border-radius: 0px 0px 4px 4px;
+  color: #f4f4f4;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.bluethumbnail:hover{box-shadow: 0 0 30px rgba(29, 75, 126, 0.53);}
+.fright{text-align: right;}
+.fright a{color: #f4f4f4;}
+.fright a:hover{color: #ea8778;}
+.clear {clear: both;}
