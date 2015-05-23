@@ -1,5 +1,5 @@
 class CalendersController < ApplicationController
-  before_action :set_calender, only: [:show, :edit, :update, :destroy]
+  before_action :set_calender, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new]
   # GET /calenders
   # GET /calenders.json
@@ -10,6 +10,7 @@ class CalendersController < ApplicationController
   # GET /calenders/1
   # GET /calenders/1.json
   def show
+    @calender = Calender.find(params[:id])
   end
 
   # GET /calenders/new
