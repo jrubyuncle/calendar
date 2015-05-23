@@ -23,7 +23,7 @@
     </thead>
 
     <tbody>
-      <%= content_tag_for(:tr, @user.calenders) do |calender| %>
+      <%= content_tag_for(:tr, @calenders) do |calender| %>
             <td><%= calender.name %></td>
             <td><%= calender.public? %></td>
             <td><%= link_to 'Show', calender %></td>

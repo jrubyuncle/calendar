@@ -4,7 +4,7 @@ class CalendersController < ApplicationController
   # GET /calenders
   # GET /calenders.json
   def index
-    @calenders = Calender.where('name like ?', "%#{params[:q]}%").all
+    @calenders = Calender.visiable.where('name like ?', "%#{params[:q]}%").all
   end
 
   # GET /calenders/1
@@ -54,7 +54,7 @@ class CalendersController < ApplicationController
   # DELETE /calenders/1
   # DELETE /calenders/1.json
   def destroy
-    @calender.destroy
+    @calender.archive
     respond_to do |format|
       format.html { redirect_to calenders_url, notice: 'Calender was successfully destroyed.' }
       format.json { head :no_content }
