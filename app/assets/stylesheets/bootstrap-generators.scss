@@ -21,7 +21,10 @@ input[type="radio"], input[type="checkbox"] {
   height: initial;
   margin-top: 7px;
 }
+.navbar-brand {
 
+  padding: 12px 15px;
+}
 
 $bgDefault      : #31455c;
 $bgHighlight    : #31455c;

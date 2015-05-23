@@ -55,10 +55,10 @@ background: #f1f1f1;
 .scoialteam{text-align: center;}
 .scoialteam a{  padding-right: 7px;}
 .ctrlwidth{width: 800px; margin: 0 auto;}
-.addshadow{box-shadow: 0 0 13px rgba(66, 130, 228, 0.26);}
+.addshadow{  box-shadow: 0 0 2px rgba(29, 75, 126, 0.53);}
 
 .btn {
-    padding: 11px 24px;
+    padding: 7px 24px;
     border: 0 none;
     font-weight: 700;
     letter-spacing: 1px;
@@ -84,4 +84,147 @@ background: #f1f1f1;
 }
 .btn.sharp {
   border-radius:0;
+}
+.well {
+    border-radius:0;
+    padding: 8px 15px 8px 15px;
+}
+.housemain{ list-style-type: none; padding-left: 0px;     margin-left: 138px;   margin-left: 124px;}
+.housemain li{  padding-bottom: 2px; }
+.houselist{ list-style-type: none;  padding-left: 0px;}
+.houselist li{
+  display: inline-block;
+  /* background: #55c3a2; */
+  /* color: white; */
+  /* padding-left: 5px; */
+  /* padding-right: 5px; */
+  padding: 3px 10px 3px 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.smallimg{  float: left;}
+.smallimg img{
+  width: 117px;
+  padding: 3px;
+  border-radius: 0px 0px 4px 4px;
+
+}
+.bluethumbnail {
+  display: block;
+  padding: 6px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #31455C;
+  border: 1px solid #ddd;
+  border-radius: 0px 0px 4px 4px;
+  color: #f4f4f4;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.bluethumbnail:hover{box-shadow: 0 0 30px rgba(29, 75, 126, 0.53);}
+.fright{text-align: right;}
+.fright a{color: #f4f4f4;}
+.fright a:hover{color: #ea8778;}
+.clear {clear: both;}
+
+
+
+.panel-login {
+  border-color: #ccc;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+  color: #00415d;
+  background-color: #fff;
+  border-color: #fff;
+  text-align:center;
+}
+.panel-login>.panel-heading a{
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+  color: #616161;
+  font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  clear: both;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+  background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+  height: 45px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+  outline:none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
+.btn-login {
+  background-color: #31455C;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  height: auto;
+  font-weight: normal;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border-color: #31455C;
+}
+.btn-login:hover,
+.btn-login:focus {
+  color: #fff;
+  background-color: #53A3CD;
+  border-color: #53A3CD;
+}
+.forgot-password {
+  text-decoration: underline;
+  color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+  text-decoration: underline;
+  color: #666;
+}
+
+.btn-register {
+  background-color: #31455C;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  height: auto;
+  font-weight: normal;
+  padding: 14px 0;
+  text-transform: uppercase;
+  border-color: #31455C;
+}
+.btn-register:hover,
+.btn-register:focus {
+  color: #fff;
+  background-color: #1CA347;
+  border-color: #1CA347;
 }
