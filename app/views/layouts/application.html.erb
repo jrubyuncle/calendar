@@ -31,10 +31,10 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><%= link_to '首頁', root_path %></li>
-          <li><%= link_to '關於這兒', about_path %></li>
-          <li><%= link_to 'goto創造一個行事曆', new_calender_path %></li>
-          <li><%= link_to '探索行事曆', calenders_path %></li>
+          <li class="<%= current_page_active('/') %>"><%= link_to '首頁', root_path %></li>
+          <li class="<%= current_page_active('/about') %>"><%= link_to '關於這兒', about_path %></li>
+          <li class="<%= current_page_active('/calendars/new')%>"><%= link_to 'goto創造一個行事曆', new_calender_path %></li>
+          <li class="<%= current_page_active('/calendars')%>"><%= link_to '探索行事曆', calenders_path %></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -43,7 +43,7 @@
             <% if current_user.admin? %>
               <li><%= link_to "後台", admin_users_path %></li>
             <% end %>
-            <li><%= link_to "個人資料", user_path(current_user) %></li>
+            <li class="<%= current_page_active(controller: :users, action: :show, id: current_user.id)%>"><%= link_to "個人資料", user_path(current_user) %></li>
             <li><%= link_to "登出", sign_out_path, method: :delete%></li>
           <% else %>
             <li><%= link_to "註冊", sign_up_path %></li>
