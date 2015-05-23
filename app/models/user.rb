@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true,
                     uniqueness: true
+
+
+  def to_s
+    nickname.to_s
+  end
 end
