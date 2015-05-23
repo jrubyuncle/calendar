@@ -9,10 +9,13 @@
       <span class="glyphicon glyphicon-calendar"></span>
       匯出
     <% end %>
-    <%= link_to edit_calender_path(@calender), class: 'btn btn-primary' do %>
-      <span class="glyphicon glyphicon-pencil"></span>
-      修改行事曆名稱
+    <% if current_user.id == current_user %>
+      <%= link_to edit_calender_path(@calender), class: 'btn btn-primary' do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        修改行事曆名稱
+      <% end %>
     <% end %>
+
     <%= link_to calender_events_path(@calender), class: 'btn btn-primary' do %>
       <span class="glyphicon glyphicon-edit"></span>
       我要共筆事件
