@@ -12,5 +12,5 @@ window.Calendar =
 
 Calendar.init_once()
 
-$ ->
+$(document).on 'ready page:load', ->
   Calendar.init()
