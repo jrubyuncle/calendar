@@ -11,13 +11,14 @@
  * file per style scope.
  *
  *= require font-awesome
+ *= require fullcalendar.min
  *= require_tree .
  *= require_self
  */
 
 body{
 
-background: #f1f1f1;	
+background: #f1f1f1;
 }
 
 .footer {
@@ -34,14 +35,14 @@ background: #f1f1f1;
 .footerlist{  margin-top: 11px;
 }
 .footerlist li {
-	display: inline-block;  
+	display: inline-block;
 	line-height: 30px;
   	padding-right: 14px;
   }
- .footerlist li a{ 
+ .footerlist li a{
  	color: rgb(178, 178, 178);
  	text-decoration: none;}
- .footerlist li a:hover{color: #f1f1f1;} 
+ .footerlist li a:hover{color: #f1f1f1;}
 
 .whitemain{
 	border: 1px solid #EAEAEA;
@@ -62,20 +63,20 @@ background: #f1f1f1;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
- 
+
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }
- 
+
 .btn-primary {
     background: #31455C;
     color: #ffffff;
 }
- 
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
     background: #ea8778;
 }
- 
+
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
