@@ -1,5 +1,5 @@
 class CalendersController < ApplicationController
-  before_action :set_calender, only: [:show, :edit, :update, :destroy, :events, :update_events]
+  before_action :set_calender, only: [:edit, :update, :destroy, :events, :update_events]
   before_action :authenticate_user!, only: [:new]
 
   # GET /calenders
