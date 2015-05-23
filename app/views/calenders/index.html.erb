@@ -18,7 +18,6 @@
             <th>User</th>
             <th>Name</th>
             <th>Public</th>
-            <th></th>
         <th></th>
         <th></th>
       </tr>
@@ -30,8 +29,7 @@
             <td><%= calender.name %></td>
             <td><%= calender.public %></td>
             <td><%= link_to 'Show', calender %></td>
-        <td><%= link_to 'Edit', edit_calender_path(calender) %></td>
-        <td><%= link_to 'Destroy', calender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_calender_path(calender) %></td>>
       <% end %>
     </tbody>
   </table>
