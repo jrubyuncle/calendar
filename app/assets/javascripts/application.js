@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require moment.min
 //= require fullcalendar.min
+//= require jquery_nested_form
 //= require_tree .

@@ -1,6 +1,7 @@
 class CalendersController < ApplicationController
-  before_action :set_calender, only: [:edit, :update, :destroy]
+  before_action :set_calender, only: [:show, :edit, :update, :destroy, :events, :update_events]
   before_action :authenticate_user!, only: [:new]
+
   # GET /calenders
   # GET /calenders.json
   def index
@@ -62,10 +63,18 @@ class CalendersController < ApplicationController
     end
   end
 
+  # GET /calendars/:calender_id/events
+  def events
+  end
+
+  # PUT /calendars/:calender_id/events
+  def update_events
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_calender
-      @calender = current_user.calenders.find(params[:id])
+      @calender = current_user.calenders.find(params[:id] || params[:calender_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

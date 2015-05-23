@@ -1,0 +1,16 @@
+<%= simple_nested_form_for @calender do |f| %>
+  <%= f.simple_fields_for :events do |ff| %>
+    <%= ff.input :title %>
+    <%= ff.input :all_day, input_html: {data: {all_day: true}} %>
+    <div data-date-input>
+      <%= ff.input :start, as: :string %>
+      <%= ff.input :end, as: :string %>
+    </div>
+    <%= ff.link_to_remove "刪除這個事件", class: 'btn btn-danger' %>
+    <hr>
+  <% end %>
+  <hr>
+  <%= f.link_to_add '新增事件', :events, class: 'btn btn-info' %>
+  <hr>
+  <%= f.submit '更新', class: 'btn btn-default btn-success btn-lg' %>
+<% end %>
