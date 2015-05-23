@@ -33,8 +33,8 @@
         <ul class="nav navbar-nav">
           <li class="<%= current_page_active('/') %>"><%= link_to '首頁', root_path %></li>
           <li class="<%= current_page_active('/about') %>"><%= link_to '關於這兒', about_path %></li>
-          <li class="<%= current_page_active('/calendars/new')%>"><%= link_to 'goto創造一個行事曆', new_calender_path %></li>
           <li class="<%= current_page_active('/calendars')%>"><%= link_to '探索行事曆', calenders_path %></li>
+          <li class="<%= current_page_active('/calendars/new')%>"><%= link_to 'goto創造一個行事曆', new_calender_path %></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
