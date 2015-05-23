@@ -8,7 +8,8 @@ window.Calendar =
   init_once: ->
 
   init_calendar: ->
-    $("#calendar").fullCalendar()
+    $("#calendar").fullCalendar({events: $("#calendar").data("path")})
+
 
 Calendar.init_once()
 

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <div class="container">
 
 
 <div id="calendar"></div>
+=======
+>>>>>>> 46ecfb7985326d3e289a319affd4e17f082038ad
 
 <div class="page-header">
   <%= link_to calenders_path, class: 'btn btn-default' do %>
@@ -16,14 +19,14 @@
     <span class="glyphicon glyphicon-edit"></span>
     我要共筆事件
   <% end %>
-
   <%= link_to calender_path(@calender, format: :ics), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-calendar"></span>
     下載 .ics 日曆檔
   <% end %>
-  <h1>Show calender</h1>
+  <h1><%= @calender.name %></h1>
 </div>
 
+<<<<<<< HEAD
 <dl class="dl-horizontal">
   <dt>User:</dt>
   <dd><%= @calender.user %></dd>
@@ -37,3 +40,6 @@
 </dl>
 
 </div>
+=======
+<div id="calendar" data-path="<%= calender_events_path(@calender, format: :json)%>"></div>
+>>>>>>> 46ecfb7985326d3e289a319affd4e17f082038ad

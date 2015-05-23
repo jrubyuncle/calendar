@@ -1,10 +1,8 @@
 module Archiveable
   extend ActiveSupport::Concern
 
-  def self.included(klass)
-    klass.instance_eval do
-      scope :visiable, ->{ where(deleted_at: nil) }
-    end
+  included do
+    default_scope -> { where(deleted_at: nil) }
   end
 
   def archive

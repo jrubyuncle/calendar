@@ -15,9 +15,9 @@ class Calender < ActiveRecord::Base
     end
     events.each do |event|
       cal.event do |e|
-        e.dtstart     = event.start
-        e.dtend       = event.end
-        e.summary     = event.title
+        e.dtstart = event.all_day ? Icalendar::Values::Date.new(event.start) : event.start
+        e.dtend = event.all_day ? Icalendar::Values::Date.new(event.end) : event.end
+        e.summary = event.title
       end
     end
     cal.publish
