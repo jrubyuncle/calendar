@@ -4,7 +4,7 @@ class CalendersController < ApplicationController
   # GET /calenders
   # GET /calenders.json
   def index
-    @calenders = Calender.all
+    @calenders = Calender.where('name like ?', "%#{params[:q]}%").all
   end
 
   # GET /calenders/1
