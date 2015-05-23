@@ -1,4 +1,8 @@
-<%= simple_nested_form_for @calender do |f| %>
+<div class="page-header">
+  <h1>編輯日曆「<%= @calender.name %>」中的事件</h1>
+</div>
+
+<%= simple_nested_form_for @calender, url: calender_events_path(@calender), method: :put do |f| %>
   <%= f.simple_fields_for :events do |ff| %>
     <%= ff.input :title %>
     <%= ff.input :all_day, input_html: {data: {all_day: true}} %>
@@ -14,3 +18,4 @@
   <hr>
   <%= f.submit '更新', class: 'btn btn-default btn-success btn-lg' %>
 <% end %>
+<hr>

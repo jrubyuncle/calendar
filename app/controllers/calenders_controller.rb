@@ -69,6 +69,12 @@ class CalendersController < ApplicationController
 
   # PUT /calendars/:calender_id/events
   def update_events
+    _params = params.require(:calender).permit(events_attributes: [:id, :title, :start, :end, :all_day, :_destroy])
+    if @calender.update(_params)
+      redirect_to @calender, notice: '更新成功！'
+    else
+      render :events
+    end
   end
 
   private
