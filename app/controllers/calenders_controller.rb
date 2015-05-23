@@ -14,7 +14,10 @@ class CalendersController < ApplicationController
     @calender = Calender.find(params[:id])
     respond_to do |format|
       format.html{ render }
-      format.ics{ render text: @calender.to_ics }
+      format.ics do
+        response.headers['Content-Disposition'] = %Q(attachment; filename="#{@calender.name}.ics")
+        render text: @calender.to_ics
+      end
     end
   end
 
