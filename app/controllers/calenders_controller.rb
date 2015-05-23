@@ -5,7 +5,7 @@ class CalendersController < ApplicationController
   # GET /calenders
   # GET /calenders.json
   def index
-    @calenders = Calender.visiable.where('name like ?', "%#{params[:q]}%").all
+    @calenders = Calender.where('name like ?', "%#{params[:q]}%").all
   end
 
   # GET /calenders/1
@@ -84,7 +84,7 @@ class CalendersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_calender
-      @calender = current_user.calenders.find(params[:id] || params[:calender_id])
+      @calender = Calender.find(params[:id] || params[:calender_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
