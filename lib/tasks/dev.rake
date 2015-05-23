@@ -13,7 +13,6 @@ namespace :dev do
       day = rand(10).days.ago.beginning_of_day
       calender.events.create!(
         title: Faker::Lorem.sentence, calender: calender, user: user, all_day: true, start: day + rand(12.hours), end: day + 12.hours + rand(12.hours)
-
       )
     end
 
@@ -23,7 +22,6 @@ namespace :dev do
       e = start + rand(5.days)
       calender.events.create!(
         title: Faker::Lorem.sentence, calender: calender, user: user, all_day: true, start: start, end: e
-
       )
     end
   end

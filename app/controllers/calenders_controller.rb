@@ -1,6 +1,6 @@
 class CalendersController < ApplicationController
   before_action :set_calender, only: [:edit, :update, :destroy, :events, :update_events]
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :events, :update_events]
 
   # GET /calenders
   # GET /calenders.json
@@ -76,8 +76,9 @@ class CalendersController < ApplicationController
 
   # PUT /calendars/:calender_id/events
   def update_events
-    _params = params.require(:calender).permit(events_attributes: [:id, :title, :start, :end, :all_day, :_destroy])
-    if @calender.update(_params)
+    @calender.assign_attributes params.require(:calender).permit(events_attributes: [:id, :title, :start, :end, :all_day, :_destroy])
+    @calender.events.each{ |event| event.user = current_user if event.user.nil? }
+    if @calender.save
       redirect_to @calender, notice: '更新成功！'
     else
       render :events
