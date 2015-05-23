@@ -37,7 +37,7 @@ class CalendersController < ApplicationController
 
     respond_to do |format|
       if @calender.save
-        format.html { redirect_to user_path(current_user), notice: 'Calender was successfully created.' }
+        format.html { redirect_to user_path(current_user), notice: '日曆成功的新增了' }
         format.json { render :show, status: :created, location: @calender }
       else
         format.html { render :new }
@@ -51,7 +51,7 @@ class CalendersController < ApplicationController
   def update
     respond_to do |format|
       if @calender.update(calender_params)
-        format.html { redirect_to @calender, notice: 'Calender was successfully updated.' }
+        format.html { redirect_to @calender, notice: '日曆成功的更新了' }
         format.json { render :show, status: :ok, location: @calender }
       else
         format.html { render :edit }
@@ -65,7 +65,7 @@ class CalendersController < ApplicationController
   def destroy
     @calender.archive
     respond_to do |format|
-      format.html { redirect_to calenders_url, notice: 'Calender was successfully destroyed.' }
+      format.html { redirect_to calenders_url, notice: '日曆成功的刪除了' }
       format.json { head :no_content }
     end
   end
