@@ -1,8 +1,15 @@
 <div class="container">
 <div class="page-header">
-  <%= link_to new_calender_path, class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-plus"></span>
-    新增行事曆
+  <% if current_user == @user %>
+    <%= link_to edit_user_path(current_user.id), class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+      修改個人資料
+    <% end %>
+
+    <%= link_to new_calender_path, class: 'btn btn-primary' do %>
+      <span class="glyphicon glyphicon-plus"></span>
+      新增行事曆
+    <% end %>
   <% end %>
   <h3>
 <%= @user.nickname %>(<%= @user.email %>)

@@ -19,8 +19,9 @@ Rails.application.routes.draw do
   get 'terms'   => 'pages#terms'
   get 'privacy' => 'pages#privacy'
   get 'about'   => 'pages#about'
+  get 'recover' => 'pages#recover'
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
 
   # Admin Routes
   namespace :admin do
