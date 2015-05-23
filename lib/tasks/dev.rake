@@ -2,11 +2,13 @@ namespace :dev do
   task fake: %i[db:reset environment] do
     titles = %w[吃飯 睡覺 打東東 做瑜伽 寫程式 上班 吃火鍋 與朋友晚餐 國小同學會 社團博覽會 迎新
       送舊學長姐 社團聚餐 系上家聚 叫到社課]
-    user = User.create! email: 'hello@test.com', password: 'password'
-    User.create! email: 'hello2@test.com', password: 'password'
+    user = User.create! nickname: '小明', email: 'hello@test.com', password: 'password'
+    user_2 = User.create! nickname: '小華', email: 'hello2@test.com', password: 'password'
     calender = user.calenders.create! name: '奧萬大行事曆', public: true
     user.calenders.create! name: '交大行事曆', public: true
     user.calenders.create! name: '台科大行事曆', public: true
+    user_2.calenders.create! name: '海大行事曆', public: true
+    user_2.calenders.create! name: '清大行事曆', public: true
     5.times do
       day = rand(10).days.ago.beginning_of_day
       calender.events.create!(
