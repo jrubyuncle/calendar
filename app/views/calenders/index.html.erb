@@ -15,6 +15,7 @@
 
       <div class="row">
         <%= content_tag_for(:tr, @calenders) do |calender| %>
+<<<<<<< HEAD
         <div class="col-sm-6 col-md-4">
           <div class="bluethumbnail">
             <div class="smallimg">
@@ -33,6 +34,9 @@
             <div class="clear"></div>
           </div>
         </div>
+=======
+          <%= render 'shared/calendar', calender: calender %>
+>>>>>>> 184a915853b4ae1ce8b96066335311af9bd8b883
         <% end %>
       </div>
 </div>
