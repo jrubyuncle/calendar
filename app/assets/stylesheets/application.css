@@ -85,6 +85,21 @@ background: #f1f1f1;
 .btn.sharp {
   border-radius:0;
 }
+
+.btn-orange {
+    background: #ea8778;
+    color: #ffffff;
+}
+
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active, .btn-orange.active, .open > .dropdown-toggle.btn-orange {
+    background: #DB5541;
+}
+
+.btn-orange:active, .btn-orange.active {
+    background: #007299;
+    box-shadow: none;
+}
+
 .well {
     border-radius:0;
     padding: 8px 15px 8px 15px;
