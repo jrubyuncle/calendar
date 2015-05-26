@@ -9,7 +9,7 @@
       <span class="glyphicon glyphicon-calendar"></span>
       匯出
     <% end %>
-    <% if current_user.id == current_user %>
+    <% if user_signed_in? && current_user.id == current_user %>
       <%= link_to edit_calender_path(@calender), class: 'btn btn-primary' do %>
         <span class="glyphicon glyphicon-pencil"></span>
         修改行事曆名稱
